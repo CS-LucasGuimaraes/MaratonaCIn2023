@@ -7,7 +7,7 @@ Gifts have a numerical measure of the degree of fun they can provide children, a
 Your task is, given the sequence of operations done on the stack of gifts, answer Santa's queries about the value of the least entertaining gift on the stack thus far.
 
 ## Input
-The first line of the input contains an integer N (1 ≤ N ≤ 106) corresponding to the number of operations performed on the present stack. The operations can be of three types: "PUSH V" where V (1 ≤ V ≤ 109) is an integer representing the degree of fun of the present being placed on the stack; "POP" which represents that Santa Claus is taking a gift from the cell to deliver and "MIN" representing a Noel query to know the smallest gift value in the stack.
+The first line of the input contains an integer N (1 ≤ N ≤ 10^6) corresponding to the number of operations performed on the present stack. The operations can be of three types: "PUSH V" where V (1 ≤ V ≤ 10^9) is an integer representing the degree of fun of the present being placed on the stack; "POP" which represents that Santa Claus is taking a gift from the cell to deliver and "MIN" representing a Noel query to know the smallest gift value in the stack.
 
 ## Output
 The output consists of a line containing an integer with the smallest present value in the stack for queries of type "MIN" or "EMPTY" for "MIN" and "POP" operations when the stack is empty.
