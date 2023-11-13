@@ -43,17 +43,18 @@ int main(){
         
         // 2x linear
         else if (action == "reverse") {
-            if (toDo.empty() == false) {
-                while (toDo.empty() == false) {
-                    reverse_toDo.push_front(toDo.front());
-                    toDo.pop_front();
-                }
+            // if (toDo.empty() == false) {
+            //     while (toDo.empty() == false) {
+            //         reverse_toDo.push_front(toDo.front());
+            //         toDo.pop_front();
+            //     }
                 
-                while (reverse_toDo.empty() == false) {
-                    toDo.push_front(reverse_toDo.back());
-                    reverse_toDo.pop_back();
-                }   
-            }
+            //     while (reverse_toDo.empty() == false) {
+            //         toDo.push_front(reverse_toDo.back());
+            //         reverse_toDo.pop_back();
+            //     }
+            // }
+            reverse(toDo.begin(), toDo.end());
         }
     }
     
