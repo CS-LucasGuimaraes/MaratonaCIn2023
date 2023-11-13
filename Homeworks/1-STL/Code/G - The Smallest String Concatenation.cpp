@@ -5,35 +5,35 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    string str;
-    deque<string> dq;
+    string TotalStr, PartialStr;
 
     int len;
 
     cin >> len;
 
-    cin >> str;
-    dq.push_front(str);
+    cin >> TotalStr;
 
     for (int i = 0; i < len-1; i++) {
-        cin >> str;
-        if (lexicographical_compare(dq.back().begin(), dq.back().end(), str.begin(), str.end())){
-            dq.push_front(str);
-        }
-        else {
-            dq.push_back(str);
-        }
+        cin >> PartialStr;
+        // if (lexicographical_compare(PartialStr.begin(), PartialStr.end(), TotalStr.begin(), TotalStr.end()) and PartialStr.size() <= TotalStr.size()) {
+        //     PartialStr += TotalStr;
+        //     swap(PartialStr, TotalStr);
+        // }
+        // else {
+            if (lexicographical_compare((PartialStr + TotalStr).begin(), (PartialStr + TotalStr).end(), (TotalStr + PartialStr).begin(), (TotalStr + PartialStr).end())) {
+                PartialStr += TotalStr;
+                swap(PartialStr, TotalStr);
+            }
+            else {
+                TotalStr += PartialStr;
+            }
+        // }
     }
-
-    while (dq.empty() == false)
-    {
-        cout << dq.back();
-        dq.pop_back();
-    }
+    
+    cout << TotalStr;
 
     return 0;
 }
-
 /*
-Erro quando a string é maior que o dq.back(). Nesses casos, o dq.back() pode ser analisado como lexicograficamente menor mesmo que faça mais sentido colocar-lo depois. Nesses casos, é preciso analisar o elemento após o dq.back(), e ver se dq.back()+[dq.back()+1] é lexicograficamente menor que a string.
+Wrong Aswer on case 4
 */ 
