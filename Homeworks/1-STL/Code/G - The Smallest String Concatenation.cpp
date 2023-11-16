@@ -6,30 +6,29 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
     string TotalStr, PartialStr;
+    vector<string> vec;
 
     int len;
 
     cin >> len;
 
-    cin >> TotalStr;
-
-    for (int i = 0; i < len-1; i++) {
+    for (int i = 0; i < len; i++) {
         cin >> PartialStr;
-        // if (lexicographical_compare(PartialStr.begin(), PartialStr.end(), TotalStr.begin(), TotalStr.end()) and PartialStr.size() <= TotalStr.size()) {
-        //     PartialStr += TotalStr;
-        //     swap(PartialStr, TotalStr);
-        // }
-        // else {
-            if (lexicographical_compare((PartialStr + TotalStr).begin(), (PartialStr + TotalStr).end(), (TotalStr + PartialStr).begin(), (TotalStr + PartialStr).end())) {
-                PartialStr += TotalStr;
-                swap(PartialStr, TotalStr);
-            }
-            else {
-                TotalStr += PartialStr;
-            }
-        // }
+        vec.push_back(PartialStr);
     }
-    
+    sort(vec.begin(), vec.end());
+
+
+    for (auto PartialStr:vec) {
+        if (lexicographical_compare((PartialStr + TotalStr).begin(), (PartialStr + TotalStr).end(), (TotalStr + PartialStr).begin(), (TotalStr + PartialStr).end())) {
+            PartialStr += TotalStr;
+            swap(PartialStr, TotalStr);
+        }
+        else {
+            TotalStr += PartialStr;
+        }
+    }
+       
     cout << TotalStr;
 
     return 0;
