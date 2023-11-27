@@ -85,8 +85,9 @@ int32_t main(){
 
             bool flag = false;
 
-            for (int i = 0; i < row; i++) {
-                for (int j = 0; j < collumn; j++) {
+
+            for (int i = notvis.first; i < row; i++) {
+                for (int j = notvis.second; j < collumn; j++) {
                     if (!visited_cords[i][j]) {
                         notvis = {i,j};
                         flag = true;
@@ -94,9 +95,8 @@ int32_t main(){
                     }
                 }
                 if (flag) break;
-                
             }
-            if (!flag) break;   
+            if (!flag) break;
         }
 
         cout << maxlake << '\n';
