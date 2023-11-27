@@ -31,74 +31,53 @@ int32_t main(){
                 }
             }
         }
-
-        // vector<int> lakes;
         int maxlake = 0;
-        // map<pair<int,int>, int> visited_cords;
-        // bool visited_cords[row][collumn];
-
-
         
-        pair<int,int> notvis = {0,0};
-        while (1) {
-            int actual_row;
-            int actual_col;
-            
-            queue<pair<int,int>> operation_order;
-            pair<int,int> cord;
-            int cont = 0;
-
-            operation_order.push(notvis);
-            visited_cords[notvis.first][notvis.second] = true;            
-
-            while (!operation_order.empty()) {
-                cord = operation_order.front();
-                operation_order.pop();
-                actual_row = cord.first;
-                actual_col = cord.second;
-                cont+=board[actual_row][actual_col];
-
-                if (board[actual_row][actual_col] != 0) {
-                    if (actual_row - 1 >= 0 && visited_cords[actual_row-1][actual_col] == false) {
-                        operation_order.push({actual_row-1,actual_col});
-                        visited_cords[actual_row-1][actual_col] = true;
-                    }
-                    if (actual_row + 1 < row && visited_cords[actual_row+1][actual_col] == false) {
-                        operation_order.push({actual_row+1,actual_col});
-                        visited_cords[actual_row+1][actual_col] = true;
-                    }
-                    if (actual_col - 1 >= 0 && visited_cords[actual_row][actual_col-1] == false) {
-                        operation_order.push({actual_row,actual_col-1});
-                        visited_cords[actual_row][actual_col-1] = true;
-                    }
-                    if (actual_col + 1 < collumn && visited_cords[actual_row][actual_col+1] == false) {
-                        operation_order.push({actual_row,actual_col+1});
-                        visited_cords[actual_row][actual_col+1] = true;
-                    }
-                }
-                // else {
+        for (int i = 0; i < row; i++) {
+            for (int j=0; j < collumn; j++) {
+                if(!visited_cords[i][j]) {
+                    int actual_row;
+                    int actual_col;
                     
-                // }
-            }
-            // lakes.push_back(cont);
-            if (cont > maxlake) maxlake = cont;
+                    queue<pair<int,int>> operation_order;
+                    pair<int,int> cord;
+                    int cont = 0;
 
-            bool flag = false;
+                    operation_order.push({i,j});
+                    visited_cords[i][j] = true;            
 
+                    while (!operation_order.empty()) {
+                        cord = operation_order.front();
+                        operation_order.pop();
+                        actual_row = cord.first;
+                        actual_col = cord.second;
+                        cont+=board[actual_row][actual_col];
 
-            for (int i = notvis.first; i < row; i++) {
-                for (int j = notvis.second; j < collumn; j++) {
-                    if (!visited_cords[i][j]) {
-                        notvis = {i,j};
-                        flag = true;
-                        break;
+                        if (board[actual_row][actual_col] != 0) {
+                            if (actual_row - 1 >= 0 && visited_cords[actual_row-1][actual_col] == false) {
+                                operation_order.push({actual_row-1,actual_col});
+                                visited_cords[actual_row-1][actual_col] = true;
+                            }
+                            if (actual_row + 1 < row && visited_cords[actual_row+1][actual_col] == false) {
+                                operation_order.push({actual_row+1,actual_col});
+                                visited_cords[actual_row+1][actual_col] = true;
+                            }
+                            if (actual_col - 1 >= 0 && visited_cords[actual_row][actual_col-1] == false) {
+                                operation_order.push({actual_row,actual_col-1});
+                                visited_cords[actual_row][actual_col-1] = true;
+                            }
+                            if (actual_col + 1 < collumn && visited_cords[actual_row][actual_col+1] == false) {
+                                operation_order.push({actual_row,actual_col+1});
+                                visited_cords[actual_row][actual_col+1] = true;
+                            }
+                        }
+
                     }
-                }
-                if (flag) break;
-            }
-            if (!flag) break;
-        }
+                    if (cont > maxlake) maxlake = cont;
+                }   
 
+            }
+        }
         cout << maxlake << '\n';
     }
 
