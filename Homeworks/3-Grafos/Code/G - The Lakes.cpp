@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 
+#define int long long
+
 using namespace std;
 
-int main(){
+int32_t main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
 
@@ -19,10 +21,14 @@ int main(){
 
         int board[row][collumn];
 
+        vector<vector<bool>> visited_cords(row, vector<bool>(collumn, false)); //bool matriz[i][j] com construtor para todos os elementos serem false;
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < collumn; j++) {
                 cin >> x;  
                 board[i][j] = x; 
+                if (x == 0) {
+                    visited_cords[i][j] = true;
+                }
             }
         }
 
@@ -30,7 +36,6 @@ int main(){
         int maxlake = 0;
         // map<pair<int,int>, int> visited_cords;
         // bool visited_cords[row][collumn];
-        vector<vector<bool>> visited_cords(row, vector<bool>(collumn, false)); //bool matriz[i][j] com construtor para todos os elementos serem false;
 
 
         
