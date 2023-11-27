@@ -28,7 +28,7 @@ int main(){
 
         // vector<int> lakes;
         int maxlake = 0;
-        map<pair<int,int>, int> visited_cords_global;
+        map<pair<int,int>, int> visited_cords;
 
 
         pair<int,int> notvis = {0,0};
@@ -38,13 +38,10 @@ int main(){
             
             queue<pair<int,int>> operation_order;
             pair<int,int> cord;
-            map<pair<int,int>, int> visited_cords;
             int cont = 0;
 
             operation_order.push(notvis);
-            visited_cords[notvis] = true;
-            visited_cords_global[notvis] = true;
-            
+            visited_cords[notvis] = true;            
 
             while (!operation_order.empty()) {
                 cord = operation_order.front();
@@ -57,22 +54,18 @@ int main(){
                     if (actual_row - 1 >= 0 && visited_cords.find({actual_row-1,actual_col}) == visited_cords.end()) {
                         operation_order.push({actual_row-1,actual_col});
                         visited_cords[{actual_row-1,actual_col}] = true;
-                        visited_cords_global[{actual_row-1,actual_col}] = true;
                     }
                     if (actual_row + 1 < row && visited_cords.find({actual_row+1,actual_col}) == visited_cords.end()) {
                         operation_order.push({actual_row+1,actual_col});
                         visited_cords[{actual_row+1,actual_col}] = true;
-                        visited_cords_global[{actual_row+1,actual_col}] = true;
                     }
                     if (actual_col - 1 >= 0 && visited_cords.find({actual_row,actual_col-1}) == visited_cords.end()) {
                         operation_order.push({actual_row,actual_col-1});
                         visited_cords[{actual_row,actual_col-1}] = true;
-                        visited_cords_global[{actual_row,actual_col-1}] = true;
                     }
                     if (actual_col + 1 < collumn && visited_cords.find({actual_row,actual_col+1}) == visited_cords.end()) {
                         operation_order.push({actual_row,actual_col+1});
                         visited_cords[{actual_row,actual_col+1}] = true;
-                        visited_cords_global[{actual_row,actual_col+1}] = true;
                     }
                 }
                 // else {
@@ -86,7 +79,7 @@ int main(){
 
             for (int i = 0; i < row; i++) {
                 for (int j = 0; j < collumn; j++) {
-                    if (visited_cords_global.find({i,j}) == visited_cords_global.end()) {
+                    if (visited_cords.find({i,j}) == visited_cords.end()) {
                         notvis = {i,j};
                         flag = true;
                         break;
