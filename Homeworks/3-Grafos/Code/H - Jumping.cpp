@@ -8,22 +8,22 @@ int32_t main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    // freopen("jumping.in", "r", stdin);
+    freopen("jumping.in", "r", stdin);
     // freopen("*.out", "w", stdout);
 
     int test_cases;
 
     cin >> test_cases;
 
-    for (int tc = 0; tc <    test_cases; tc++) {
+    for (int tc = 0; tc < test_cases; tc++) {
         int shoppings, x;
         cin >> shoppings;
         vector<vector<int>> adj(shoppings+1);
 
         for (int i = 1; i < shoppings+1; i++) {
             cin >> x;
-            if (i-x > 0) adj[i].push_back(i-x);
-            if (i+x <= shoppings) adj[i].push_back(i+x);
+            if (i-x > 0) adj[i-x].push_back(i);
+            if (i+x <= shoppings) adj[i+x].push_back(i);
         }
 
         queue<int> operation_order;
