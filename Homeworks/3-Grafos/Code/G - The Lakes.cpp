@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 
+int dx[] = {0,0,1,-1};
+int dy[] = {1,-1,0,0};
+
 #define int long long
 
 using namespace std;
@@ -53,25 +56,15 @@ int32_t main(){
                         actual_col = cord.second;
                         cont+=board[actual_row][actual_col];
 
-                        if (board[actual_row][actual_col] != 0) {
-                            if (actual_row - 1 >= 0 && visited_cords[actual_row-1][actual_col] == false) {
-                                operation_order.push({actual_row-1,actual_col});
-                                visited_cords[actual_row-1][actual_col] = true;
-                            }
-                            if (actual_row + 1 < row && visited_cords[actual_row+1][actual_col] == false) {
-                                operation_order.push({actual_row+1,actual_col});
-                                visited_cords[actual_row+1][actual_col] = true;
-                            }
-                            if (actual_col - 1 >= 0 && visited_cords[actual_row][actual_col-1] == false) {
-                                operation_order.push({actual_row,actual_col-1});
-                                visited_cords[actual_row][actual_col-1] = true;
-                            }
-                            if (actual_col + 1 < collumn && visited_cords[actual_row][actual_col+1] == false) {
-                                operation_order.push({actual_row,actual_col+1});
-                                visited_cords[actual_row][actual_col+1] = true;
+                        for (int d = 0; d < 4; d++) {
+                            int ax = actual_row + dx[d];
+                            int ay = actual_col + dy[d];
+
+                            if(ax >= 0 && ax < row && ay >=  0 && ay < collumn && visited_cords[ax][ay] == false) {
+                                operation_order.push({ax,ay});
+                                visited_cords[ax][ay] = true;
                             }
                         }
-
                     }
                     if (cont > maxlake) maxlake = cont;
                 }   
