@@ -27,10 +27,10 @@ int main(){
     }
 
     queue<int> operation_order;
-    vector<int> dist(people+1, 2e3+2);
     int maxdist = 0;
 
     for (int i = 1; i < people+1; i++){
+        vector<int> dist(people+1, 2e3+2);
         vector<bool> visited(people+1, false);
         operation_order.push(i);
         visited[i] = true;
