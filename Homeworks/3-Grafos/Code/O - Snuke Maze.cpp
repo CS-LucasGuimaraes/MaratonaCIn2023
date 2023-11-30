@@ -25,13 +25,23 @@ int main() {
     stack<pair<int,int>> operation_order;
     pair<int,int> cord;
     vector<vector<bool>> visited(row+2, vector<bool>(col+2, false));
-    char expected_order[6] = {'s','n','u','k','e','s'};
+    // char expected_order[6] = {'s','n','u','k','e','s'};
+    char expected_order[6] = {'e','k','u','n','s','e'};
     vector<vector<int>> expected(row+2, vector<int>(col+2));
 
-    if (board[1][1] == 's') {
-        operation_order.push({1,1});
-        // visited[1][1] = true;
-        expected[1][1] = 0;
+    if (board[1][1] != 's') {
+
+        cout << "No";
+        return 0;
+    }
+
+    operation_order.push({row,col});
+    visited[row][col] = true;
+    
+    for (int i = 0; i < 5; i++) {
+        if (board[row][col] == expected_order[i]) {
+            expected[row][col] = i;
+        }
     }
 
     while(!operation_order.empty()) {
@@ -39,10 +49,12 @@ int main() {
         int i = operation_order.top().first;
         int j = operation_order.top().second;
         operation_order.pop();
-        visited[i][j] = true;
-
 
         for (int a = 0; a < 4; a++) {
+            if (i+dx[a] == 1 && j+dy[a] == 1) {
+                cout << "Yes";
+                return 0;
+            }
             if (!visited[i+dx[a]][j+dy[a]]) {
                 if (board[i+dx[a]][j+dy[a]] == expected_order[expected[i][j]+1]) {
                     operation_order.push({i+dx[a],j+dy[a]});
@@ -54,12 +66,7 @@ int main() {
         }
     }
 
-    if (visited[row][col]) {
-        cout << "Yes";
-    }
-    else {
-        cout << "No";
-    }
+    cout << "No";
 
     return 0;
 }
