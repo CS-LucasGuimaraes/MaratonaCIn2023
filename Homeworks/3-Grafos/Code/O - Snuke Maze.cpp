@@ -22,7 +22,7 @@ int main() {
         }
     }
 
-    stack<pair<int,int>> operation_order;
+    queue<pair<int,int>> operation_order;
     pair<int,int> cord;
     vector<vector<bool>> visited(row+2, vector<bool>(col+2, false));
     // char expected_order[6] = {'s','n','u','k','e','s'};
@@ -46,8 +46,8 @@ int main() {
 
     while(!operation_order.empty()) {
         
-        int i = operation_order.top().first;
-        int j = operation_order.top().second;
+        int i = operation_order.front().first;
+        int j = operation_order.front().second;
         operation_order.pop();
 
         for (int a = 0; a < 4; a++) {
