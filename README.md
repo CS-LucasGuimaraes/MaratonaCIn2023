@@ -13,7 +13,7 @@ The author was in the 1st period of university during this contest.
 |  Contest 1 | 2023-11-18 08:00 | 2023-11-18 13:00 |       3/12      |  16/50  |   251   |
 | Homework 2 | 2023-11-18 17:00 | 2023-11-25 08:00 |       0/16      |  --/42  |    0    |
 |  Contest 2 | 2023-11-25 08:00 | 2023-11-25 13:00 |       2/11      |  30/38  |   207   |
-| Homework 3 | 2023-11-25 17:00 | 2023-12-02 14:00 |       7/16      |   3/13  |  14668  |
+| Homework 3 | 2023-11-25 17:00 | 2023-12-02 14:00 |      14/16      |   1/19  |  65947  |
 
 ## ✒️ Author
 Lucas Guimarães Fernandes - [CS-LucasGuimaraes](https://github.com/CS-LucasGuimaraes)
