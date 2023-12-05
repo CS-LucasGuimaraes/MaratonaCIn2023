@@ -23,7 +23,7 @@ int main(){
     }
     
     priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> operation_order; //min heap
-    vector<ll> parent(cities+1);
+    vector<ll> parent(cities+1, 0);
     vector<ll> dist(cities+1, 1e14);
 
     dist[1] = 0;
@@ -35,7 +35,7 @@ int main(){
         int len = pair.first;
         int out = pair.second;
 
-        if (len > dist[out]) continue; // se o peso do nado atual for maior que a dist() da saida, continue;
+        if (len > dist[out]) continue; // se o peso do nodo atual for maior que a dist() da saida, continue;
 
         for(auto e: adj[out]) {
             ll cost = e.first;
@@ -48,4 +48,7 @@ int main(){
             } 
         }
     }
+
+    return 0;
 }
+
