@@ -56,12 +56,12 @@ int main(){
             if (m == 0) k = x;
             else k = y; 
             for (int i = 1; i < n; i++) {
-                for (int j = 1; j < n; j++) {
-                    matrix[i][j] = min(matrix[i][j], matrix[i][k]+matrix[k][j]);
+                for (int j = i; j < n; j++) {
+                    matrix[i][j] = matrix[j][i] = min(matrix[i][j], matrix[i][k]+matrix[k][j]);
                 }   
             }
         }
-
+        
         sum = 0;
 
         for (int i = 1; i < n; i++) {
