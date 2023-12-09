@@ -50,6 +50,18 @@ int main(){
             rank[get<2>(e)] = min(min(a+1, b+1), c);
         }
 
+        for (auto e: teams) {
+            if (get<0>(e) == "Ahmad") continue;
+
+            int a = rank[get<0>(e)];
+            int b = rank[get<1>(e)];
+            int c = rank[get<2>(e)];
+
+            rank[get<0>(e)] = min(min(a, b+1), c+1);
+            rank[get<1>(e)] = min(min(a+1, b), c+1);
+            rank[get<2>(e)] = min(min(a+1, b+1), c);
+        }
+
         cout << rank.size() << '\n';
 
         vector<vector<pair<string, int>>> order(rank.size()+1);
