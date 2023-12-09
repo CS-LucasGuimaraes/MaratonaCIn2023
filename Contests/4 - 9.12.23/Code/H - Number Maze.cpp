@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-#define INF 10e9
+#define INF LLONG_MAX
 #define int long long 
 
 using namespace std;
@@ -29,8 +29,8 @@ int32_t main(){
         priority_queue<pair<int, pair<int,int>>, vector<pair<int, pair<int,int>>>, greater<pair<int,pair<int,int>>>> operation_order; //min heap
         vector<vector<int>> dist(row, vector<int>(col, INF));
 
-        dist[0][0] = 0;
-        operation_order.push({0, {0,0}});
+        dist[0][0] = board[0][0];
+        operation_order.push({board[0][0], {0,0}});
 
         while (!operation_order.empty()) {
             int len = operation_order.top().first;
@@ -45,7 +45,7 @@ int32_t main(){
 
                 if (x < 0 || x >= row || y < 0 || y >= col) continue;
 
-                int cost = board[x][y];
+                int cost = board[x][y]; 
                 int current_distance = dist[out.first][out.second] + cost;
 
                 if (current_distance < dist[x][y]) {
@@ -58,7 +58,6 @@ int32_t main(){
         cout << dist[row-1][col-1] << '\n';
 
     }
-    cout << '\n';
 
     return 0;
 }
