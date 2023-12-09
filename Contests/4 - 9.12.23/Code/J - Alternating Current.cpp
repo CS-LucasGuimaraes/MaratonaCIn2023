@@ -7,33 +7,16 @@ int main(){
     cin.tie(0);
 
     string str; cin >> str;
-    int c;
+    stack<char> stk;
 
-    int n = str.size();
-
-    while (n > 0) {
-        c = 0;
-        
-        if (str.find("++") != str.npos) {
-            int i = str.find("++");
-            str[i] = 0; str[i+1] = 0;
-            c++;
-            n-=2;
-        }
-        if (str.find("--") != str.npos) {
-            int i = str.find("--");
-            str[i] = 0; str[i+1] = 0;
-            c++;
-            n-=2;
-        }
-
-        if (c == 0) {
-            cout << "No";
-            return 0;
-        }
+    for (auto x: str) {
+        if (stk.empty()) stk.push(x);
+        else if (stk.top() == x) stk.pop();
+        else stk.push(x);
     }
 
-    cout << "Yes";
+    if (stk.empty()) cout << "Yes";
+    else cout << "No";
 
     return 0;
 }
