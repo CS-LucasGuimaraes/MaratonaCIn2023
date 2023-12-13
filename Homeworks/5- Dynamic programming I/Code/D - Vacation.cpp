@@ -1,58 +1,52 @@
-#include <bits/stdc++.h>
+    #include <bits/stdc++.h>
 
-using namespace std;
+    using namespace std;
 
-struct actv{
-    int a, b, c;  
-};
+    struct actv{
+        int a, b, c;  
+    };
 
-struct choice{
-    string choice;
-    int value;
-};
+    struct choice{
+        int a, b, c;
+        int value;
+    };
 
-vector<choice> bestchoice(1e5, {'z', -1});
-vector<actv> vacation;
+    vector<choice> bestchoice(1e5, {-1, -1, -1, -1});
+    vector<actv> vacation;
 
-choice makechoise(int x) {
-    if (bestchoice[x].value != -1) return (bestchoice[x]);
+    choice makeChoice(int x) {
+        if (bestchoice[x].value != -1) return (bestchoice[x]);
 
-    if (x == 1) {
-        if (vacation[x].a == vacation[x].b && vacation[x].b == vacation[x].c) return bestchoice[x] = {"abc", vacation[x].a};
-        
-        else if (vacation[x].a == vacation[x].b && vacation[x].a > vacation[x].c) return bestchoice[x] = {"ab", vacation[x].a};
-        
-        else if (vacation[x].a > vacation[x].b && vacation[x].a > vacation[x].c) return bestchoice[x] = {"a", vacation[x].a};
-        
-        else if (vacation[x].a < vacation[x].b && vacation[x].b == vacation[x].c) return bestchoice[x] = {"bc", vacation[x].b};
+        if (x == 0) {
+            return bestchoice[x] = {vacation[0].a, vacation[0].b, vacation[0].c, max(max(vacation[0].a, vacation[0].b), vacation[0].c)};
+        }
 
-        else if (vacation[x].a < vacation[x].b && vacation[x].b > vacation[x].c) return bestchoice[x] = {"b", vacation[x].b};
+        choice chc;
 
-        else if (vacation[x].c > vacation[x].a && vacation[x].c > vacation[x].b) return bestchoice[x] = {"c", vacation[x].c};
+        chc.a = max(vacation[x].a + makeChoice(x-1).b, vacation[x].a + makeChoice(x-1).c);
+        chc.b = max(vacation[x].b + makeChoice(x-1).a, vacation[x].b + makeChoice(x-1).c);
+        chc.c = max(vacation[x].c + makeChoice(x-1).a, vacation[x].c + makeChoice(x-1).b);
+
+        return bestchoice[x] = {chc.a, chc.b, chc.c, max(max(chc.a, chc.b), chc.c)};
+    } 
+
+    int main(){
+        ios::sync_with_stdio(false);
+        cin.tie(0);
+
+        int n; cin >> n;
+
+        int a, b, c;
 
 
+        for (int i = 0; i < n; i++) {
+            cin >> a >> b >> c;
 
-        bestchoice[x] = {'a' , max(max(vacation[x].a, vacation[x].b),vacation[x].c)};
+            vacation.push_back({a, b, c});
+        }
+
+
+        cout << makeChoice(n-1).value;
+
+        return 0;
     }
-} 
-
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-
-    int n; cin >> n;
-
-    int a, b, c;
-
-
-    for (int i = 0; i < n; i++) {
-        cin >> a >> b >> c;
-
-        vacation.push_back({a, b, c});
-    }
-
-
-    cout << makechoise(n).value;
-
-    return 0;
-}
