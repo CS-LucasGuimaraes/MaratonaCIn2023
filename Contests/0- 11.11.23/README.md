@@ -5,7 +5,7 @@
 |:-:|:--------------------------------------------------------------------:|:------:|:---:|
 | A |[SPOJ SMPSUM](https://vjudge.net/problem/SPOJ-SMPSUM/origin)          | Solved | ✅ |
 | B |[CodeForces 1475A](https://vjudge.net/problem/CodeForces-1475A/origin)| Solved | ☑️ |
-| C |[Gym 102254D](https://vjudge.net/problem/Gym-102254D/origin)          |   WA   | ❌ |
+| C |[Gym 102254D](https://vjudge.net/problem/Gym-102254D/origin)          | Solved | ☑️ |
 | D |[CodeForces 1814A](https://vjudge.net/problem/CodeForces-1814A/origin)|  ---   | ❕ |
 | E |[Gym 103797E](https://vjudge.net/problem/Gym-103797E/origin)          |  ---   | ❕ |
 | F |[CSES 1755](https://vjudge.net/problem/CSES-1755/origin)              | Solved | ☑️ |
