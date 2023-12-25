@@ -1,4 +1,7 @@
-output
+# Executables
 *.exe
+output
+
+# VS Code
 .vscode
 .vs
