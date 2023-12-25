@@ -9,7 +9,7 @@
 | D |[CodeForces 1814A](https://vjudge.net/problem/CodeForces-1814A/origin)|  ---   | ❕ |
 | E |[Gym 103797E](https://vjudge.net/problem/Gym-103797E/origin)          |  ---   | ❕ |
 | F |[CSES 1755](https://vjudge.net/problem/CSES-1755/origin)              | Solved | ☑️ |
-| G |[CSES 1071](https://vjudge.net/problem/CSES-1071/origin)              |  ---   | ❕ |
+| G |[CSES 1071](https://vjudge.net/problem/CSES-1071/origin)              | Solved | ☑️ |
 | H |[CSES 1092](https://vjudge.net/problem/CSES-1092/origin)              | Solved | ☑️ |
 | I |[CodeForces 1742B](https://vjudge.net/problem/CodeForces-1742B/origin)|   WA   | ❌ |
 | J |[CodeForces 1886B](https://vjudge.net/problem/CodeForces-1886B/origin)|  ---   | ❕ |
