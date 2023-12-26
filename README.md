@@ -8,17 +8,17 @@ This repository houses my code submissions for each stage of the contest, showca
 
 * [❓ Key Information](#key-information)
 * [📈 Performance Breakdown](#performance-breakdown)
-* [️ Repository Structure](#repository-structure)
+* [️🏗️ Repository Structure](#repository-structure)
 * [✉️ Contact](#contact)
-* [ Last Update](#last-update)
+* [🔄 Last Update](#last-update)
 
-## ❓ Key Information: 
+## ❓ Key Information: <a name="key-information"></a>
  * Contest Host: Informatics Center (CIn) at the Federal University of Pernambuco (UFPE)
  * Author: Lucas Guimarães Fernandes ([CS-LucasGuimaraes](https://github.com/CS-LucasGuimaraes))
  * Academic Status: 1st period of university during the contest
  * License: MIT License ([LICENSE.md](https://github.com/CS-LucasGuimaraes/MaratonaCIn_Entry-2023/blob/main/LICENSE))
 
-## 📈 Performance Breakdown
+## 📈 Performance Breakdown <a name="performance-breakdown"></a>
 |  Contest:  |    Start date    |     End date     | Solved Problems | Upsolving | Ranking | Penalty |
 |:----------:|:----------------:|:----------------:|:---------------:|:---------:|:-------:|:-------:|
 |   Warmup   | 2023-11-11 08:30 | 2023-11-11 13:30 |       2/13      |    8/11   |  52/62  |   189   |
@@ -34,18 +34,18 @@ This repository houses my code submissions for each stage of the contest, showca
 
 For detailed contest breakdowns, head over to the [Performance]((https://github.com/CS-LucasGuimaraes/MaratonaCIn_Entry-2023/tree/main/Performance)) section.
 
-## 🏗️ Repository Structure
+## 🏗️ Repository Structure <a name="repository-structure"></a>
 - `contests/`: Code submissions for each contest, organized by folder
 - `homeworks/`: Code submissions for each Homework, organized by folder
 - `performance/`: Detailed performance breakdowns and analysis
 - `README.md`: This file
 - `LICENSE.md`: License information
 
-## ✉️ Contact
+## ✉️ Contact <a name="contact"></a>
 For any further questions or inquiries, reach me at: [cs.lucas.guimaraes@gmail.com](mailto:cs.lucas.guimaraes@gmail.com)
 
-## 🔄 Last Update:
-December 25, 2023
+## 🔄 Last Update: <a name="last-update"></a>
+December 25, 2023   
 <br>
 
 **I strive to keep this README updated regularly to reflect the latest changes and progress.**
