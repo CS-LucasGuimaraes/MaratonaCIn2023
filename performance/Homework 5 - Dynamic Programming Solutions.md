@@ -19,12 +19,12 @@ Welcome to my code submissions for Homework 5, focusing on dynamic programming (
 | D |[AtCoder dp_c](https://vjudge.net/problem/AtCoder-dp_c/origin)        |         Vacation        | Solved | ✅ |
 | E |[AtCoder dp_e](https://vjudge.net/problem/AtCoder-dp_e/origin)        |        Knapsack 2       |   --   | ❕ |
 | F |[AtCoder dp_n](https://vjudge.net/problem/AtCoder-dp_n/origin)        |          Slimes         |   WA   | ❌ |
-| G |[CSES 1636](https://vjudge.net/problem/CSES-1636/origin)              |   Coin Conbinations II  | Solved | ☑️ |
+| G |[CSES 1636](https://vjudge.net/problem/CSES-1636/origin)              |   Coin Conbinations II  |Upsolved| ☑️ |
 | H |[AtCoder dp_h](https://vjudge.net/problem/AtCoder-dp_h/origin)        |          Grid 1         | Solved | ✅ |
 | I |[CodeForces 1195C](https://vjudge.net/problem/CodeForces-1195C/origin)|   Basketball Exercise   | Solved | ✅ |
 | J |[CodeForces 1881E](https://vjudge.net/problem/CodeForces-1881E/origin)|      Block Sequence     |   --   | ❕ |
 | K |[UVA 10130](https://vjudge.net/problem/UVA-10130/origin)              |        SuperSale        |   --   | ❕ |
-| L |[SPOJ PARTY](https://vjudge.net/problem/SPOJ-PARTY/origin)            |      Party Schedule     | Solved | ☑️ |
+| L |[SPOJ PARTY](https://vjudge.net/problem/SPOJ-PARTY/origin)            |      Party Schedule     |Upsolved| ☑️ |
 | M |[Gym 102021C](https://vjudge.net/problem/Gym-102021C/origin)          |    Coolest Ski Route    |   --   | ❕ |
 | N |[CodeForces 1409F](https://vjudge.net/problem/CodeForces-1409F/origin)|Subsequences of Length Two|   --   | ❕ |
 
