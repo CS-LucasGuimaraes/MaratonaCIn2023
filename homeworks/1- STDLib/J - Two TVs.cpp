@@ -1,57 +1,52 @@
 #include <bits/stdc++.h>
 
+#define endl '\n'
+
 using namespace std;
+using ll = long long;
+using pii = pair<int,int>;
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int len, start, end, start2;
-    vector<bool> tv1(1000000000);
-    vector<bool> tv2(1000000000);
-    bool can1 = true;
-    bool can2 = true;
-    bool flag = true;
+    int n; cin >> n;
 
+    int start, end;
 
-    cin >> len;
+    int tv1 = -1;
+    int tv2 = -1;
 
-    for (int i = 0; i < len; i++) {
-        cin >> start;
-        cin >> end;
-        if (flag) {
-            start2 = start;
-            for (start; start <= end; start++) {
-                if (tv1[start] == true) {
-                    can1 = false;
-                }
-                if (tv2[start] == true) {
-                    can2 = false;
-                }
-            }
-            if (can1) {
-                for(start2; start2 <= end; start2++) {
-                    tv1[start2] = true;
-                }
-            }
+    vector<pii> shows;
 
-            else if (can2) {
-                for(start2; start2 <= end; start2++) {
-                    tv2[start2] = true;
-                }
-            }
-            else {
-                cout << "NO";
-                flag = false;
-            }
+    for (int i = 0; i < n; i++) {
+        cin >> start >> end;
 
-            can1 = true;
-            can2 = true;
-        }
-        
+        shows.push_back({start, end});
     }
-        if (flag) {
-            cout << "YES";
+
+    sort(shows.begin(), shows.end());
+
+    for (auto e:shows){
+        start = e.first;
+        end = e.second; 
+
+        if (tv1 < start) {
+            tv1 = end;
         }
+
+        else if (tv2 < start) {
+            tv2 = end;
+        }
+
+        else {
+            cout << "NO";
+            return 0;
+        }
+
+    }
+
+    cout << "YES";
+
     return 0;
 }
