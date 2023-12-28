@@ -1,38 +1,35 @@
 #include <bits/stdc++.h>
 
+#define endl '\n'
+
 using namespace std;
+
+bool lex_sort(string a, string b) {
+    return a + b < b + a;
+}
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    string TotalStr, PartialStr;
-    vector<string> vec;
 
-    int len;
+    int n; cin >> n;
 
-    cin >> len;
+    string s;
 
-    for (int i = 0; i < len; i++) {
-        cin >> PartialStr;
-        vec.push_back(PartialStr);
+    vector<string> ss;
+
+    for (int i = 0; i < n; i++) {
+        cin >> s;
+
+        ss.push_back(s);
     }
-    sort(vec.begin(), vec.end());
 
+    sort(ss.begin(), ss.end(), lex_sort);
 
-    for (auto PartialStr:vec) {
-        if (lexicographical_compare((PartialStr + TotalStr).begin(), (PartialStr + TotalStr).end(), (TotalStr + PartialStr).begin(), (TotalStr + PartialStr).end())) {
-            PartialStr += TotalStr;
-            swap(PartialStr, TotalStr);
-        }
-        else {
-            TotalStr += PartialStr;
-        }
+    for (auto e: ss) {
+        cout << e;
     }
-       
-    cout << TotalStr;
+    
 
     return 0;
 }
-/*
-Wrong Aswer on case 4
-*/ 
