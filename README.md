@@ -30,7 +30,7 @@ This repository houses my code submissions for each stage of the contest, showca
 |  Contest 3 | 2023-12-02 08:00 | 2023-12-02 13:00 |       4/11      |    0/7    |   7/25  |   642   |
 | Homework 4 | 2023-12-02 23:59 | 2023-12-09 07:59 |       6/14      |    0/8    |   2/21  |  21976  |
 |  Contest 4 | 2023-12-09 08:00 | 2023-12-09 13:00 |       5/12      |    0/7    |   9/23  |   709   |
-| Homework 5 | 2023-12-09 18:00 | 2023-12-15 18:00 |       7/13      |    2/6    |   3/9   |  32179  |
+| Homework 5 | 2023-12-09 18:00 | 2023-12-15 18:00 |       7/14      |    2/6    |   3/9   |  32179  |
 
 For detailed contest breakdowns, head over to the <a href="https://github.com/CS-LucasGuimaraes/MaratonaCIn_Entry-2023/tree/main/performance">Performance</a> section.
 
