@@ -5,10 +5,9 @@ Welcome to my code submissions for Homework 1, focusing on STDLib problems!
 
  * Homework Period: November 11-18, 2023
  * Primary Topic: STDLib
- * Total Problems: 
- * Solved Problems: 
- * Attempted but Failed: 
- * Pending Attempts: 
+ * Total Problems: 16
+ * Solved Problems: 13 (10 during contest, 3 during upsolving)
+ * Pending Attempts: 3
 
 ## 📈 Problem Overview
 | # | Problems                                                             |       Description       | Status | 🗳️ |
