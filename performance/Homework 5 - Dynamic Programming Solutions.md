@@ -6,8 +6,7 @@ Welcome to my code submissions for Homework 5, focusing on dynamic programming (
  * Homework Period: December 9-15, 2023
  * Primary Topic: Dynamic Programming
  * Total Problems: 14
- * Solved Problems: 8 (5 during contest, 3 during upsolving)
- * Attempted but Failed: 1
+ * Solved Problems: 9 (7 during contest, 2 during upsolving)
  * Pending Attempts: 5
 
 ## 📈 Problem Overview
@@ -23,7 +22,7 @@ Welcome to my code submissions for Homework 5, focusing on dynamic programming (
 | H |[AtCoder dp_h](https://vjudge.net/problem/AtCoder-dp_h/origin)        |          Grid 1         | Solved | ✅ |
 | I |[CodeForces 1195C](https://vjudge.net/problem/CodeForces-1195C/origin)|   Basketball Exercise   | Solved | ✅ |
 | J |[CodeForces 1881E](https://vjudge.net/problem/CodeForces-1881E/origin)|      Block Sequence     |   --   | ❕ |
-| K |[UVA 10130](https://vjudge.net/problem/UVA-10130/origin)              |        SuperSale        |   --   | ❕ |
+| K |[UVA 10130](https://vjudge.net/problem/UVA-10130/origin)              |        SuperSale        | Solved | ✅ |
 | L |[SPOJ PARTY](https://vjudge.net/problem/SPOJ-PARTY/origin)            |      Party Schedule     |Upsolved| ☑️ |
 | M |[Gym 102021C](https://vjudge.net/problem/Gym-102021C/origin)          |    Coolest Ski Route    |   --   | ❕ |
 | N |[CodeForces 1409F](https://vjudge.net/problem/CodeForces-1409F/origin)|Subsequences of Length Two|   --   | ❕ |
