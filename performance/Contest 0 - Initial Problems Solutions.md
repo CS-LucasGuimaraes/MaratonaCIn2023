@@ -7,6 +7,8 @@ Welcome to my code submissions for Contest 0 (warmup), focusing on initial probl
  * Primary Topic: Initial Problems
  * Total Problems: 13
  * Solved Problems: 10 (2 during contest, 8 during upsolving)
+ * Pending Attempts: 3 
+
 
 ## 📈 Problem Overview
 | # | Problems                                                             |       Description       | Status | 🗳️ |
