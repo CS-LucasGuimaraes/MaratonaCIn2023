@@ -2,23 +2,29 @@
 
 using namespace std;
 
+#define INF 2147483647
+
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
     
     int n; cin >> n;
 
-    int a;
+    vector<int> slimes(n);
+    vector<int> bestsum(n);
 
-    vector<int> slimes;
 
-    for (int i = 0; i < n; i++) {
-        cin >> a;
+    cin >> slimes[0]; bestsum[0] = 0;
 
-        slimes.push_back(a);
+    for (int i = 1; i < n; i++) {
+        cin >> slimes[i];
+
+        bestsum[i] = slimes[i] + slimes[i-1];
     }
 
-
+    for (auto e:slimes) cout << e << ' ';
+    cout << '\n';
+    for (auto e:bestsum) cout << e << ' ';
 
     return 0;
 }

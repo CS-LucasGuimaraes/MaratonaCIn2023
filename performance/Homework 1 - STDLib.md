@@ -6,15 +6,15 @@ Welcome to my code submissions for Homework 1, focusing on STDLib problems!
  * Homework Period: November 11-18, 2023
  * Primary Topic: STDLib
  * Total Problems: 16
- * Solved Problems: 13 (10 during contest, 3 during upsolving)
- * Pending Attempts: 3
+ * Solved Problems: 14 (10 during contest, 4 during upsolving)
+ * Pending Attempts: 2
 
 ## 📈 Problem Overview
 | # | Problems                                                             |       Description       | Status | 🗳️ |
 |:-:|:--------------------------------------------------------------------:|:-----------------------:|:------:|:---:|
 | A |[AtCoder dp_d](https://vjudge.net/problem/AtCoder-dp_d/origin)        |        Conformity       | Solved | ✅ |
 | B |[AtCoder dp_b](https://vjudge.net/problem/AtCoder-dp_b/origin)        |  Smallest on the Stack  | Solved | ✅ |
-| C |[AtCoder dp_f](https://vjudge.net/problem/AtCoder-dp_f/origin)        |      Coin Collector     |   --   | ❕ |
+| C |[AtCoder dp_f](https://vjudge.net/problem/AtCoder-dp_f/origin)        |      Coin Collector     |Upsolved| ☑️ |
 | D |[AtCoder dp_e](https://vjudge.net/problem/AtCoder-dp_e/origin)  |I Can Guess the Data Structure!| Solved | ✅ |
 | E |[AtCoder dp_n](https://vjudge.net/problem/AtCoder-dp_n/origin)        |     Ferry Loading IV    | Solved | ✅ |
 | F |[CSES 1636](https://vjudge.net/problem/CSES-1636/origin)              |      Ada and Queue      | Solved | ✅ |
