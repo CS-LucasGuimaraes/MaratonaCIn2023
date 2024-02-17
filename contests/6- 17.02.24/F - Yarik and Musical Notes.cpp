@@ -18,13 +18,6 @@ int solve() {
 
         array.push_back(a);
     }
-
-    vector<int> pow2;
-
-    for (int i = 0; i < n; i++) {
-        a = (1 << array[i]);
-        pow2.push_back(a);
-    }
     
     int c = 0;
 
@@ -34,8 +27,11 @@ int solve() {
             if (array[i] == array[j]) c++;
 
             else {
-                if (array[i] == 1 || array[j] == 1 || (array[i] %2 == 0 && array[j] %2 == 0))
-                    if (array[i]*pow2[j] == array[j]*pow2[i]) c++;
+                int greater = max(array[i], array[j]);
+                int less = min(array[i], array[j]);
+                
+                if (greater % less == 0)
+                    if ((1 << (greater-less)) == greater/less) c++;
             }
 
 
