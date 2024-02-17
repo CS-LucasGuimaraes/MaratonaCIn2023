@@ -31,8 +31,13 @@ This repository houses my code submissions for each stage of the contest, showca
 | Homework 4 | 2023-12-02 23:59 | 2023-12-09 07:59 |       6/14      |    0/8    |   2/21  |  21976  |
 |  Contest 4 | 2023-12-09 08:00 | 2023-12-09 13:00 |       5/12      |    0/7    |   9/23  |   709   |
 | Homework 5 | 2023-12-09 18:00 | 2023-12-15 18:00 |       7/14      |    2/6    |   3/9   |  32179  |
+|  Contest 5*| 2024-02-03 08:00 | 2024-02-03 13:00 |     CANCELED    | CANCELED  | CANCELED| CANCELED|
+| Homework 6 | 2024-02-04 06:00 | 2024-02-11 03:00 |       3/12      |    0/9    |   3/5   |  23727  |
+|  Contest 6 | 2024-02-17 08:00 | 2024-02-17 13:00 |       5/10      |    0/5    |   4/13  |   895   |
 
 For detailed contest breakdowns, head over to the <a href="https://github.com/CS-LucasGuimaraes/MaratonaCIn_Entry-2023/tree/main/performance">Performance</a> section.
+
+\* Contest 5 was canceled due to internet problems.
 
 ## 🏗️ Repository Structure <a name="repository-structure"></a>
 - `contests/`: Code submissions for each contest, organized by folder
@@ -74,7 +79,7 @@ For any further questions or inquiries, reach me at:
 </div>
 
 ## 🔄 Last Update: <a name="last-update"></a>
-December 28, 2023   
+February, 17, 2023   
 <br>
 
 **I strive to keep this README updated regularly to reflect the latest changes and progress.**
