@@ -1,33 +1,16 @@
 #include <bits/stdc++.h>
 
-// #define endl '\n'
+#define endl '\n'
 
 using namespace std;
 using ll = long long;
 
 const int max_size = 2e5+5;
-vector<ll> bit(max_size+1, 0);
+vector<ll> arr(max_size+1,0);
+vector<ll> bit(max_size+1,0);
 int n, q;
 
-void add(int idx, int val) {
-    for (++idx; idx < n; idx += idx & -idx)
-        bit[idx] += val;
-}
-
-void range_add(int l, int r, int val) {
-    add(l, val);
-    if (r < n)
-    add(r + 1, -val);
-}
-
-int point_query(int idx) {
-    int ret = 0;
-    for (++idx; idx > 0; idx -= idx & -idx)
-        ret += bit[idx];
-    return ret;
-}
-
-ll qry(int i){ // [1,i] 1 indexado
+ll query(int i){ // [1,i]
 	ll ret = 0;
 	for(; i > 0; i -= i & -i){
 		ret += bit[i];
@@ -35,26 +18,34 @@ ll qry(int i){ // [1,i] 1 indexado
 	return ret;
 }
 
-ll qryRange(int l, int r){ // 1 indexado inclusivo
-	ll qr = qry(r);
-	ll ql = qry(l-1);
+ll queryRange(int l, int r){
+	ll qr = query(r);
+	ll ql = query(l-1);
 	return qr-ql;
 }
+void increment(ll i, ll v){
+	for(; i <= n; i += i & -i){
+		bit[i] += v;
+	}
+}
+void build(const vector<ll>& nums){
+	for(int i = 0; i < nums.size(); i++){
+		increment(i+1,nums[i]);
+	}
+}
+
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
 
+    
     cin >> n >> q;
 
-    ll x;
-
     for (int i = 1; i <= n; i++) {
-        cin >> x;
+        cin >> arr[i];
 
-        range_add(i, i, x);
-        cout << i << " - " << qryRange(i,i) << endl;
-
+        increment(i, arr[i]-arr[i-1]);
     }
 
     int id;
@@ -66,13 +57,14 @@ int main(){
 
         if (id == 1) {
             cin >> a >> b >> u;
-            range_add(a, b, u);
+            increment(a, u);
+            increment(b+1, (-u));
             
         } 
 
         else if (id == 2) {
             cin >> k;
-            cout << point_query(k) << endl;
+            cout << query(k) << endl;
         }
 
     }
