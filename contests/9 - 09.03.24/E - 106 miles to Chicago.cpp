@@ -18,7 +18,7 @@ int solve(int tc) {
         adj[y].push_back({prob, x});
     }
 
-    priority_queue<pair<int,int>> operation_order;      // Max heap
+    priority_queue<pair<double,int>> operation_order;      // Max heap
     vector<bool> visited(places+1, false);
     vector<double> safeness(places+1, 0);
 
@@ -59,5 +59,5 @@ int main(){
         if (tc) cout << endl;
     }
 
-    return 0;
+    return 0;   
 }
