@@ -4,11 +4,9 @@
 #define int long long //change main to int32_t
 
 using namespace std;
-
+using pii = pair<int,int>;
 
 const int INF = 1e9+10;
-
-
 
 int solve() {
 
@@ -16,9 +14,9 @@ int solve() {
 
     cin >> cities;
 
-    vector<vector<int>> mat(cities+1, vector<int>(cities+1, INF));
     vector<int> dist(cities+1);
     vector<int> pos(cities+1);
+    vector<pii> adj(cities+1);
 
     dist[0] = 0;
     pos[0] = 0;
@@ -29,45 +27,45 @@ int solve() {
         dist[i] = pos[i] - pos[i-1];
     }
 
-    mat[1][2] = 1;
-    mat[cities][cities-1] = 1;
+    adj[1] = {INF, 1};
+    adj[cities] = {1, INF};
 
     for (int i = 2; i <= cities-1; i++) {
         if (dist[i] > dist[i+1]) {
-            mat[i][i+1] = 1;
-            mat[i][i-1] = dist[i];
+            adj[i] = {dist[i], 1};
         }
         else { //if (dist[i] < dist[i+1]) 
-            mat[i][i-1] = 1;
-            mat[i][i+1] = dist[i+1];
+            adj[i] = {1, dist[i+1]};
         }
     }
-
-    for (int i = 0; i <= cities; i++) {
-        mat[i][i] = 0;
-    }
-    
-
-// -------------------------------------------------------------------------- //
-
-    for (int k = 1; k <= cities; k++) {
-        for (int i = 1; i <= cities; i++) {
-            for (int j = 1; j <= cities; j++) {
-                mat[i][j] = min(mat[i][j], mat[i][k]+mat[k][j]);
-            }
-        }
-    }
-
-// -------------------------------------------------------------------------- //
 
     cin >> queries;
+
+    vector<int> prefix0(cities+2), prefix1(cities+1);
+    prefix0[cities+1]=0; prefix1[0]=0;
+
+    for (int i = 1; i <= cities; i++) {
+        prefix1[i] = prefix1[i-1] + adj[i].second;
+        prefix0[cities+1-i] += prefix0[cities+2-i] + adj[cities+1-i].first;
+    }
+    
 
     int x, y;
 
     for (int i = 0; i < queries; i++) {
         cin >> x >> y;
 
-        cout << mat[x][y] << endl;
+        int sum = 0;
+
+        if (y > x) {
+            sum = prefix1[y-1] - prefix1[x-1];
+        }
+
+        else {
+            sum = prefix0[y+1] - prefix0[x+1];
+        }
+
+        cout << sum << endl;
 
     }
 
