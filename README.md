@@ -1,4 +1,4 @@
-# MaratonaCIn 2023 Entry Contest Submissions
+# MaratonaCIn 2023 Entry Contest
 
 Welcome to my repository for the 2023 MaratonaCIn entry contest!
 
@@ -7,6 +7,7 @@ This repository houses my code submissions for each stage of the contest, showca
 ## 📖 Table of Contents
 
 * [❓ Key Information](#key-information)
+* [🏆 Results](#results)
 * [📈 Performance Breakdown](#performance-breakdown)
 * [️🏗️ Repository Structure](#repository-structure)
 * [✉️ Contact](#contact)
@@ -14,9 +15,12 @@ This repository houses my code submissions for each stage of the contest, showca
 
 ## ❓ Key Information: <a name="key-information"></a>
  * Contest Host: Informatics Center (CIn) at the Federal University of Pernambuco (UFPE)
- * Author: Lucas Guimarães Fernandes ([CS-LucasGuimaraes](https://github.com/CS-LucasGuimaraes))
+ * Competitor: Lucas Guimarães Fernandes </lgf_cin> ([CS-LucasGuimaraes](https://github.com/CS-LucasGuimaraes))
  * Academic Status: 1st period of university during the contest
  * License: MIT License ([LICENSE.md](https://github.com/CS-LucasGuimaraes/MaratonaCIn_Entry-2023/blob/main/LICENSE))
+
+## 🏆 Results <a name="results"></a>
+I was invited to join the team after this Entry Contest! This was a great accomplishment for me, and I'm excited to continue learning and growing as a programmer.  
 
 ## 📈 Performance Breakdown <a name="performance-breakdown"></a>
 |  Contest:  |    Start date    |     End date     | Solved Problems | Upsolving | Ranking | Penalty |
@@ -31,9 +35,16 @@ This repository houses my code submissions for each stage of the contest, showca
 | Homework 4 | 2023-12-02 23:59 | 2023-12-09 07:59 |       6/14      |    0/8    |   2/21  |  21976  |
 |  Contest 4 | 2023-12-09 08:00 | 2023-12-09 13:00 |       5/12      |    0/7    |   9/23  |   709   |
 | Homework 5 | 2023-12-09 18:00 | 2023-12-15 18:00 |       7/14      |    2/6    |   3/9   |  32179  |
-|  Contest 5*| 2024-02-03 08:00 | 2024-02-03 13:00 |     CANCELED    | CANCELED  | CANCELED| CANCELED|
+|  Contest 5*| 2024-02-03 08:00 | 2024-02-03 13:00 |     CANCELED    |    3/11   | CANCELED| CANCELED|
 | Homework 6 | 2024-02-04 06:00 | 2024-02-11 03:00 |       3/12      |    0/9    |   3/5   |  23727  |
 |  Contest 6 | 2024-02-17 08:00 | 2024-02-17 13:00 |       5/10      |    0/5    |   4/13  |   895   |
+| Homework 7 | 2024-02-18 00:00 | 2024-02-24 00:00 |       3/11      |    0/8    |   4/10  |  25516  |
+|  Contest 7 | 2024-02-24 08:00 | 2024-02-24 13:00 |       7/11      |    1/4    |   6/15  |  1500   |
+| Homework 8 | 2024-02-25 00:00 | 2024-03-02 00:00 |       4/12      |    0/8    |   3/6   |  32962  |
+|  Contest 8 | 2024-03-02 08:00 | 2024-03-02 13:00 |       3/12      |    0/9    |   7/15  |   759   |
+| Homework 9 | 2024-03-02 17:00 | 2024-03-09 00:00 |       0/13      |    0/13   |  --/5   |    0    |
+|  Contest 9 | 2024-03-09 08:00 | 2024-03-09 13:00 |       7/10      |    1/3    |   9/12  |  1252   |
+|   FINALS   | 2024-03-17 08:00 | 2024-03-17 13:00 |       1/11      |    0/10   |   11/13 |    22   |
 
 For detailed contest breakdowns, head over to the <a href="https://github.com/CS-LucasGuimaraes/MaratonaCIn_Entry-2023/tree/main/performance">Performance</a> section.
 
@@ -79,7 +90,7 @@ For any further questions or inquiries, reach me at:
 </div>
 
 ## 🔄 Last Update: <a name="last-update"></a>
-February, 17, 2023   
+March, 17, 2023
 <br>
 
 **I strive to keep this README updated regularly to reflect the latest changes and progress.**
